@@ -9,9 +9,9 @@ const RESTAURANT_PHONE = "22366519491";
 
 const MENU = [
   {category:"plats", name:"Riz au gras / Zamai", description:"Un délicieux riz mijoté, généreux et parfumé.", minimumPrice:500,
-   image:"img/zamai.jpeg"},
+   image:"zamai.jpeg"},
   {category:"plats", name:"Poulet braisé", description:"Poulet grillé et accompagné de sa garniture.", minimumPrice:3000,
-   image:"img/poulet.jpg"},
+   image:"poulet.jpg"},
   {category:"plats", name:"Poisson grillé", description:"Poisson frais, grillé et relevé juste comme il faut.", minimumPrice:2000,
    image:"img/poisson.jpg"},
   {category:"plats", name:"Vermicelle", description:"Un grand saveur authentique vermicelle bien fait.", minimumPrice:500,
