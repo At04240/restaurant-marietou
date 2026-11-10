@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Découvrez notre menu et commandez facilement par WhatsApp ou SMS.">
+  <title>MARIETOU RESTO</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#accueil"><span class="brand-mark">🍽</span><span>MARIETOU <b>RESTO</b></span></a>
+    <nav>
+      <a href="#accueil">Accueil</a>
+      <a href="#menu">Notre menu</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-order" href="#menu">Commander</a>
+  </header>
+
+  <main>
+    <section class="hero" id="accueil">
+      <div class="hero-content">
+        <span class="eyebrow">FRAIS • SAVOUREUX • FAIT AVEC PASSION</span>
+        <h1>Le plaisir de bien<br><em>manger.</em></h1>
+        <p>Découvrez nos préparations faites avec soin. Choisissez un article et commandez en quelques secondes.</p>
+        <a class="primary-btn" href="#menu">Découvrir le menu <span>→</span></a>
+      </div>
+      <div class="hero-photo" role="img" aria-label="Plat gourmand"></div>
+    </section>
+
+    <section class="menu-section" id="menu">
+      <div class="section-heading">
+        <div><span class="eyebrow">NOTRE SÉLECTION</span><h2>Le menu</h2></div>
+        <p>Choisissez une catégorie, puis appuyez sur un article pour commander.</p>
+      </div>
+      <div class="menu-filters" role="group" aria-label="Filtrer le menu">
+        <button class="filter-btn active" type="button" data-filter="tous" aria-pressed="true">Tout</button>
+        <button class="filter-btn" type="button" data-filter="plats" aria-pressed="false">Plats</button>
+        <button class="filter-btn" type="button" data-filter="jus" aria-pressed="false">Jus</button>
+        <button class="filter-btn" type="button" data-filter="sauces" aria-pressed="false">Sauces</button>
+      </div>
+      <div class="menu-grid" id="menuGrid"></div>
+      <p class="empty-menu" id="emptyMenu" hidden>Aucun article dans cette catégorie pour le moment.</p>
+    </section>
+
+    <section class="order-banner" id="contact">
+      <div><span class="eyebrow">UNE ENVIE GOURMANDE ?</span><h2>Votre prochain repas<br>est à portée de clic.</h2></div>
+      <a class="primary-btn" href="#menu">Choisir un article <span>→</span></a>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand" href="#accueil"><span class="brand-mark">🍽</span><span>Saveurs <b>du Mali</b></span></a>
+    <p>© <span id="year"></span> MARIETOU RESTO — Tous droits réservés.</p>
+    <p class="footer-contact">Commandes : <span id="displayPhone">+223 66 51 94 91</span></p>
+  </footer>
+
+  <div class="modal-backdrop" id="orderModal" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="close-modal" id="closeModal" aria-label="Fermer">×</button>
+      <span class="eyebrow">PASSER UNE COMMANDE</span>
+      <h2 id="modalTitle">Votre commande</h2>
+      <p id="selectedDish" class="selected-dish"></p>
+      <label for="unitAmount">Montant proposé par article (F CFA)</label>
+      <input id="unitAmount" type="number" min="1" step="1" required>
+      <label for="customerName">Votre nom (facultatif)</label>
+      <input id="customerName" type="text" placeholder="Ex. : Aliou">
+      <label for="quantity">Quantité</label>
+      <input id="quantity" type="number" min="1" step="1" value="1">
+      <p class="order-total" id="orderTotal" aria-live="polite"></p>
+      <p class="order-error" id="orderError" role="alert"></p>
+      <label for="details">Précisions (facultatif)</label>
+      <textarea id="details" rows="2" placeholder="Ex. : sans piment, livraison..."></textarea>
+      <div class="order-actions">
+        <button class="whatsapp-btn" id="whatsappBtn">Commander sur WhatsApp</button>
+        <button class="sms-btn" id="smsBtn">Commander par SMS</button>
+      </div>
+      <small>Sur mobile, WhatsApp ou votre messagerie s'ouvrira avec le numéro et le message préremplis. Appuyez sur « Envoyer » pour confirmer la commande.</small>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
